@@ -22,7 +22,7 @@ embed_data = rule(
     attrs = {
         "srcs": attr.label_list(allow_files=True),
         "_embed_data_tool": attr.label(
-            default = Label("//cc_embed_data:embed_data"),
+            default = Label("@rules_cc_embed_data//cc_embed_data:embed_data"),
             executable = True,
             cfg = "host",
         ),
