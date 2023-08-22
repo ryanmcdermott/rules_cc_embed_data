@@ -1,6 +1,6 @@
 # rules_cc_embed_data
 
-Bazel rule to generated C++ header files with embedded binary data.
+Bazel rule to generate C++ header files with embedded binary data.
 
 ## Pre-Requisites
 
