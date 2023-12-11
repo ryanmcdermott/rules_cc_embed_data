@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
@@ -12,6 +13,8 @@ int main(int argc, char* argv[]) {
   for (int i = 3; i < argc; i += 2) {
     std::string input_path = argv[i];
     std::string var_name = argv[i + 1];
+    // Handle hyphenated files.
+    std::replace(var_name.begin(), var_name.end(), '-', '_');
     std::ifstream input_file(input_path, std::ios::binary);
     output_file << "const char data_" << var_name << "[] = {";
     char ch;
